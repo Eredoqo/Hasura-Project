@@ -1,12 +1,10 @@
 # HASURA SEED SOURCE
 # it is used in the
-seed?=dummy-data
-
+seed?=seeds
 # HASURA MIGRATION STEPS
 # it is used in the hasura postgres migration scripts to control
 # how many up/down migrations to applu
 steps?=1
-
 
 
 #
