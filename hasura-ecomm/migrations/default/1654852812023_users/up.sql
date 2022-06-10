@@ -9,3 +9,10 @@ CREATE TABLE "public"."users" (
 CONSTRAINT "userss_pkey" PRIMARY KEY ("id")
 
 );
+
+ALTER TABLE ONLY "public"."users"
+ADD CONSTRAINT "messages_user_id_fkey"
+FOREIGN KEY (id) REFERENCES users(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE
+NOT DEFERRABLE;

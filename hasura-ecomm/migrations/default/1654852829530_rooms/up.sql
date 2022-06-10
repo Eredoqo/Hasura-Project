@@ -10,3 +10,14 @@ CREATE TABLE "public"."rooms" (
 CONSTRAINT "rooms_pkey" PRIMARY KEY ("id")
 
  );
+ALTER TABLE ONLY "public"."rooms"
+ADD CONSTRAINT "rooms_user_id_fkey"
+FOREIGN KEY (user_id) REFERENCES users(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE
+NOT DEFERRABLE;
+
+ 
+
+
+ 
