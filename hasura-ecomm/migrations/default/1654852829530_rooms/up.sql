@@ -1,15 +1,13 @@
 
 CREATE TABLE "public"."rooms" (
+  "id" TEXT,
+  "user_id" TEXT NOT NULL,
+  "name" TEXT ,
+  "created_at" TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  CONSTRAINT "rooms_pkey" PRIMARY KEY ("id")
+);
 
-"id" TEXT,
 
-"user_id" TEXT NOT NULL,
-
-"created_at" TIMESTAMPTZ DEFAULT NOW() NOT NULL,
-
-CONSTRAINT "rooms_pkey" PRIMARY KEY ("id")
-
- );
 ALTER TABLE ONLY "public"."rooms"
 ADD CONSTRAINT "rooms_user_id_fkey"
 FOREIGN KEY (user_id) REFERENCES users(id)
