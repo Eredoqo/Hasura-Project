@@ -44,6 +44,7 @@ init:
 	@echo "Seeding the main database from: \"$(seed).sql\"..."
 	@hasura seed apply --project hasura-ecomm --database-name default --file $(seed).sql
 	@curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | bash
+	
 seed:
 	@echo "Seeding the main database from: \"$(seed).sql\"..."
 	@hasura seed apply --project hasura-ecomm --database-name default --file $(seed).sql
