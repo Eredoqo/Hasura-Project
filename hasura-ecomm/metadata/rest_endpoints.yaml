@@ -1,1 +1,9 @@
-[]
+- definition:
+    query:
+      collection_name: allowed-queries
+      query_name: Public list of messages
+  url: messages
+  methods:
+    - GET
+  name: Public list of messages
+  comment: null

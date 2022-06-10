@@ -1,0 +1,3 @@
+table:
+  schema: public
+  name: chatroom__display_live

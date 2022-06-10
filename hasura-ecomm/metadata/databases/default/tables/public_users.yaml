@@ -1,0 +1,22 @@
+table:
+  schema: public
+  name: users
+object_relationships:
+  - name: user
+    using:
+      foreign_key_constraint_on: id
+  - name: userById
+    using:
+      foreign_key_constraint_on:
+        column: id
+        table:
+          schema: public
+          name: users
+array_relationships:
+  - name: rooms
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          schema: public
+          name: rooms

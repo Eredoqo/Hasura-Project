@@ -1,1 +1,14 @@
-[]
+- name: allowed-queries
+  definition:
+    queries:
+      - name: Public list of messages
+        query: |
+          query MyQuery {
+          	messages {
+          		id
+          		user_id
+          		room_id
+          		message
+          		created_at
+          	}
+          }
